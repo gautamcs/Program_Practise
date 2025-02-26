@@ -1,16 +1,22 @@
 package com.gautam.model;
 
-public class Address implements Cloneable {
+// Protect the Immutability feature 
+public class Address1 {
 
 	private String buildingName;
 	private String city;
 	private String state;
 
-	public Address(String buildingName, String city, String state) {
+	public Address1(String buildingName, String city, String state) {
 		super();
 		this.buildingName = buildingName;
 		this.city = city;
 		this.state = state;
+	}
+	
+	// To maintain the immutable feature by using copy constructor 
+	public Address1(Address1 address) {
+		this(address.getBuildingName(), address.getCity(), address.getCity());
 	}
 
 	public String getBuildingName() {
@@ -39,11 +45,7 @@ public class Address implements Cloneable {
 
 	@Override
 	public String toString() {
-		return "Address [buildingName=" + buildingName + ", city=" + city + ", state=" + state + "]";
+		return "Address1 [buildingName=" + buildingName + ", city=" + city + ", state=" + state + "]";
 	}
 
-	
-	public Object clone() throws CloneNotSupportedException {
-		return super.clone();
-	}
 }
