@@ -1,4 +1,4 @@
-## To create an immutable class in Java, you need to follow these general principles:
+# To create an immutable class in Java, you need to follow these general principles:
 
 Declare the class as final so it can’t be extended.
 Make all of the fields private so that direct access is not allowed.
