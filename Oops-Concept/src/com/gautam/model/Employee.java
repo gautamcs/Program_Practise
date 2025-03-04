@@ -38,7 +38,6 @@ public final class Employee {
 		return salary;
 	}
 	
-
 	// Deep clone is mandatory in getter method 
 	public Map<Integer, String> getMap() {
 		Map<Integer, String> tempMap = new HashMap<>(); 
