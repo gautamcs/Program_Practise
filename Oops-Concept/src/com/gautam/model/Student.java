@@ -1,6 +1,6 @@
 package com.gautam.model;
 
-public class Student {
+public class Student { // Create the Immutable class by using Cloneable interface
 
 	private final int stuId;
 	private final String stuName;

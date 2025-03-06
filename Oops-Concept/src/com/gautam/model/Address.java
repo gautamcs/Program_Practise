@@ -1,5 +1,7 @@
 package com.gautam.model;
 
+
+// Create the Immutable class by using Cloneable interface
 public class Address implements Cloneable {
 
 	private String buildingName;

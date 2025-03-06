@@ -8,7 +8,9 @@ public final class Employee {
 	private final int empId;
 	private final String empName;
 	private final int salary;
-	private final Map<Integer, String> map; 
+
+	// Mutable field
+	 private final Map<Integer, String> map;
 
 	
 
@@ -17,7 +19,7 @@ public final class Employee {
 		this.empId = empId;
 		this.empName = empName;
 		this.salary = salary;
-		
+		// Deep Copy to protect the Immutability
 		Map<Integer, String> tempMap = new HashMap<>(); 
 		for(Map.Entry<Integer, String> temp : map.entrySet()) {
 			tempMap.put(temp.getKey(), temp.getValue());
@@ -44,8 +46,8 @@ public final class Employee {
 		for(Map.Entry<Integer, String> temp : map.entrySet()) {
 			tempMap.put(temp.getKey(), temp.getValue());
 		}
-		// return tempMap; // Immutability does't break
-		return map; // Immutablity breaks in this case
+		 return tempMap; // Immutability does't break
+		//return map; // Immutablity breaks in this case
 		
 	}
 

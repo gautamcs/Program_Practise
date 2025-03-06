@@ -1,3 +1,4 @@
+
 # To create an immutable class in Java, you need to follow these general principles:
 
 Declare the class as final so it can’t be extended.
