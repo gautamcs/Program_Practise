@@ -11,11 +11,14 @@ import java.util.Arrays;
 * */
 public class BubbleSort {
 
+    // all the comparisons are made even if the array is already sorted.
+    // Time Complexity: O(n)2
+    // Space Complexity: O(1)
     public static void bubbleSortWay1(int arr[], int len) {
         for(int i = 0; i < len; i++) {
             for(int j = 0; j < len - i-1; j++) {
                 if(arr[j] > arr[j+1]) {
-                    int temp = arr[j];
+                    int temp = arr[j]; // Space complexity: O(1)
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
                 }
@@ -23,18 +26,20 @@ public class BubbleSort {
         }
     }
 
+    // Time Complexity: O(n)2
+    // Space Complexity: O(2)
     public static void bubbleSortWay2(int arr[], int len) {
         for(int i = 0; i < len; i++) {
-            int xChange = 0;
+            boolean swap = false; // Space complexity: O(1)
             for(int j = 0; j < len - i-1; j++) {
                 if(arr[j] > arr[j+1]) {
-                    int temp = arr[j];
+                    int temp = arr[j]; // Space complexity: O(1) For Swapping
                     arr[j] = arr[j+1];
                     arr[j+1] = temp;
-                    xChange++;
+                    swap = true;
                 }
             }
-            if(xChange == 0) {
+            if(!swap) {
                 break;
             }
         }
