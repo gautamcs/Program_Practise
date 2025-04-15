@@ -14,7 +14,7 @@ public class BinarySearch {
         System.out.println(" Index : "+index);
     }
 
-    public static int binarySearchNormal(int arr[], int low, int high, int item) {
+    public static int binarySearchNormal(int[] arr, int low, int high, int item) {
 
         while(low < high) {
             int mid = low + (high - low) / 2;
@@ -32,7 +32,7 @@ public class BinarySearch {
     }
 
 
-    public static int binarySearchRecursive(int arr[], int low, int high, int item) {
+    public static int binarySearchRecursive(int[] arr, int low, int high, int item) {
 
         if(low > high) {
             return -1;

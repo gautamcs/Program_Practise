@@ -11,7 +11,7 @@ import java.util.Arrays;
 * */
 public class SelectionSort {
 
-    public static void selectionSortWay1(int arr[], int len) {
+    public static void selectionSortWay1(int[] arr, int len) {
         for(int i = 0; i < len; i++) {
             int min = i;
             for(int j = i; j < len; j++) {
