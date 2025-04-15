@@ -14,7 +14,7 @@ public class BubbleSort {
     // all the comparisons are made even if the array is already sorted.
     // Time Complexity: O(n)2
     // Space Complexity: O(1)
-    public static void bubbleSortWay1(int arr[], int len) {
+    public static void bubbleSortWay1(int[] arr, int len) {
         for(int i = 0; i < len; i++) {
             for(int j = 0; j < len - i-1; j++) {
                 if(arr[j] > arr[j+1]) {
@@ -28,7 +28,7 @@ public class BubbleSort {
 
     // Time Complexity: O(n)2
     // Space Complexity: O(2)
-    public static void bubbleSortWay2(int arr[], int len) {
+    public static void bubbleSortWay2(int[] arr, int len) {
         for(int i = 0; i < len; i++) {
             boolean swap = false; // Space complexity: O(1)
             for(int j = 0; j < len - i-1; j++) {
@@ -45,7 +45,8 @@ public class BubbleSort {
         }
     }
     public static void main(String[] args) {
-        int[] arr = {2,1,5,8,5,4,9,0,7,11};
+        //int[] arr = {2,1,5,8,5,4,9,0,7,11};
+        int[] arr = {9,8,7,6,5,4,3,2,1};
 
         System.out.println(" Original Array: "+ Arrays.toString(arr));
         bubbleSortWay2(arr, arr.length);
