@@ -8,15 +8,16 @@ import java.util.Arrays;
 *   Each pass select the smallest element and place it at exact position
 *   First we find the smallest element and put it at the 0'th index, then find the 2nd smallest element
 *   and put it at 1st index, and so on ...
+*  In each pass, Min element will be at the bottom
 * */
 public class SelectionSort {
 
     public static void selectionSortWay1(int[] arr, int len) {
-        for(int i = 0; i < len; i++) {
+        for(int i = 0; i < len - 1; i++) {
             int min = i;
             for(int j = i; j < len; j++) {
-                // if(arr[min] > arr[j]) { // Increasing Order
-                if(arr[min] < arr[j]) { // Decreasing Order
+                 if(arr[min] > arr[j]) { // Increasing Order
+                //if(arr[min] < arr[j]) { // Decreasing Order
                     min = j;
                 }
             }

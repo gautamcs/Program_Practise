@@ -9,6 +9,11 @@ import java.util.Arrays;
 * Continue this process,
 * In each pass, Max element will be at the top
 * */
+// Adaptive & Stable in Nature
+// By Default, No Adaptive, If we add a flag to check the swap, Then adaptive
+// Suitable for Array as compared to LinkedList
+// Best Case: O(n)
+// Worst Case: O(n2)
 public class BubbleSort {
 
     // all the comparisons are made even if the array is already sorted.

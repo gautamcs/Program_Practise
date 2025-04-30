@@ -2,6 +2,10 @@ package com.gautam.algo.sorting;
 
 import java.util.Arrays;
 
+// Adaptive & Stable in Nature
+// Suitable for LinkedList as compared to Array
+// Best Case: O(n)
+// Worst Case: O(n2)
 public class InsertionSort {
 
     public static void insertionSortImpl1(int[] arr, int n) {

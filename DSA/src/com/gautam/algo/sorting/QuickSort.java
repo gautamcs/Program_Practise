@@ -8,7 +8,8 @@ public class QuickSort {
         if(low < high) {
             //int pi = partitionIndexLast(arr, low, high);
             //int pi = partitionIndexFirst(arr, low, high);
-            int pi = partitionIndexMiddle(arr, low, high);
+            // int pi = partitionIndexMiddle(arr, low, high);
+            int pi = partitionFirst1(arr, low, high);
             quickSortImpl(arr, low, pi-1);
             quickSortImpl(arr, pi+1, high);
         }
@@ -22,7 +23,7 @@ public class QuickSort {
         arr[high] = temp;
     }
 
-   // When the last index is selected as Pivot element
+   // When the last index is considered as Pivot element
     public static int partitionIndexLast(int[] arr, int low, int high) {
         int i = low-1;
         // random(arr, low, high); // Use when pivot element needs to be selected as random number
@@ -49,6 +50,19 @@ public class QuickSort {
         }
         swap(arr, i, low);
         return i;
+    }
+
+    public static int partitionFirst1(int[] arr, int low, int high) {
+        int pivot = arr[low];
+        int i = low + 1;
+        for(int j = low+1; j <= high; j++) {
+            if(arr[j] < pivot) {
+                swap(arr, i, j);
+                i++;
+            }
+        }
+        swap(arr, i-1, low);
+        return i-1;
     }
 
     public static int partitionIndexMiddle(int[] arr, int low, int high) {
